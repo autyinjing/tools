@@ -1,0 +1,5 @@
+/home/aut/study/test_code/cmake/backup/cmake/t4/build/CMakeFiles/edit_cache.dir
+/home/aut/study/test_code/cmake/backup/cmake/t4/build/CMakeFiles/rebuild_cache.dir
+/home/aut/study/test_code/cmake/backup/cmake/t4/build/src/CMakeFiles/rebuild_cache.dir
+/home/aut/study/test_code/cmake/backup/cmake/t4/build/src/CMakeFiles/edit_cache.dir
+/home/aut/study/test_code/cmake/backup/cmake/t4/build/src/CMakeFiles/main.dir
