@@ -1,3 +1,0 @@
-/home/aut/study/test_code/cmake/backup3/cmake/t1/CMakeFiles/edit_cache.dir
-/home/aut/study/test_code/cmake/backup3/cmake/t1/CMakeFiles/rebuild_cache.dir
-/home/aut/study/test_code/cmake/backup3/cmake/t1/CMakeFiles/hello.dir
