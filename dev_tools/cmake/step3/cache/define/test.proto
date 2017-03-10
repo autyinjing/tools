@@ -1,0 +1,10 @@
+
+// test proto
+
+syntax="proto2";
+
+package test;
+
+message Test {
+    optional string name = 1 [default = "aut"];
+};
