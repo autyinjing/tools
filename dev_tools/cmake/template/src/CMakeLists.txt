@@ -1,0 +1,17 @@
+
+# src CMakelists.txt
+
+AUX_SOURCE_DIRECTORY(./ SRC_LIST)
+
+IF (DEBUG)
+    ADD_DEFINITIONS(" -Wall -DDEBUG -g -fPIC -MMD -Wno-pmf-conversions -fno-inline")
+ELSE (DEBUG)
+    ADD_DEFINITIONS(" -Wall -g -fPIC -MMD -Wno-pmf-conversions -fno-inline")
+ENDIF (DEBUG)
+
+FIND_PACKAGE(glib REQUIRED)
+IF (GLIB_FOUND)
+    INCLUDE_DIRECTORIES(${GLIB_INCLUDE_DIR})
+    ADD_LIBRARY(test SHARED ${SRC_LIST})
+    TARGET_LINK_LIBRARIES(test ${GLIB_LIBRARY_DIR})
+ENDIF (GLIB_FOUND)

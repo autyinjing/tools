@@ -1,0 +1,4 @@
+/home/aut/tmp/t2/usr/lib/libhello.so.1.2
+/home/aut/tmp/t2/usr/lib/libhello.so.1
+/home/aut/tmp/t2/usr/lib/libhello.so
+/home/aut/tmp/t2/usr/lib/libhello.a

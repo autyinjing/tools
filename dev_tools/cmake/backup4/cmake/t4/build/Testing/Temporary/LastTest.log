@@ -1,0 +1,41 @@
+Start testing: Mar 21 10:47 CST
+----------------------------------------------------------
+1/2 Testing: mytest
+1/2 Test: mytest
+Command: "/home/aut/study/tools/dev_tools/cmake/backup4/cmake/t4/build/src/main"
+Directory: /home/aut/study/tools/dev_tools/cmake/backup4/cmake/t4/build
+"mytest" start time: Mar 21 10:47 CST
+Output:
+----------------------------------------------------------
+Hello Wolrd from HelloFinc()!
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"mytest" end time: Mar 21 10:47 CST
+"mytest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: lstest
+2/2 Test: lstest
+Command: "/usr/bin/ls"
+Directory: /home/aut/study/tools/dev_tools/cmake/backup4/cmake/t4/build
+"lstest" start time: Mar 21 10:47 CST
+Output:
+----------------------------------------------------------
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+src
+Testing
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"lstest" end time: Mar 21 10:47 CST
+"lstest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 21 10:47 CST

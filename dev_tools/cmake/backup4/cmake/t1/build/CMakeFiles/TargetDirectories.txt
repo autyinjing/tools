@@ -1,0 +1,3 @@
+/home/aut/study/tools/dev_tools/cmake/backup4/cmake/t1/build/CMakeFiles/edit_cache.dir
+/home/aut/study/tools/dev_tools/cmake/backup4/cmake/t1/build/CMakeFiles/rebuild_cache.dir
+/home/aut/study/tools/dev_tools/cmake/backup4/cmake/t1/build/CMakeFiles/hello.dir
