@@ -1,0 +1,161 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+__anon1::buffer	./cJSON.c	/^	char *buffer;$/;"	m	struct:__anon1	file:	access:public
+__anon1::length	./cJSON.c	/^	int length;$/;"	m	struct:__anon1	file:	access:public
+__anon1::offset	./cJSON.c	/^	int offset;$/;"	m	struct:__anon1	file:	access:public
+buffer	./cJSON.c	/^	char *buffer;$/;"	m	struct:__anon1	file:	access:public
+cJSON	./cJSON.h	/^typedef struct cJSON {$/;"	s
+cJSON	./cJSON.h	/^} cJSON;$/;"	t	typeref:struct:cJSON
+cJSON::child	./cJSON.h	/^	struct cJSON *child;		\/* An array or object item will have a child pointer pointing to a chain of the items in the array\/object. *\/$/;"	m	struct:cJSON	typeref:struct:cJSON::cJSON	access:public
+cJSON::next	./cJSON.h	/^	struct cJSON *next,*prev;	\/* next\/prev allow you to walk array\/object chains. Alternatively, use GetArraySize\/GetArrayItem\/GetObjectItem *\/$/;"	m	struct:cJSON	typeref:struct:cJSON::cJSON	access:public
+cJSON::prev	./cJSON.h	/^	struct cJSON *next,*prev;	\/* next\/prev allow you to walk array\/object chains. Alternatively, use GetArraySize\/GetArrayItem\/GetObjectItem *\/$/;"	m	struct:cJSON	typeref:struct:cJSON::	access:public
+cJSON::string	./cJSON.h	/^	char *string;				\/* The item's name string, if this item is the child of, or is in the list of subitems of an object. *\/$/;"	m	struct:cJSON	access:public
+cJSON::type	./cJSON.h	/^	int type;					\/* The type of the item, as above. *\/$/;"	m	struct:cJSON	access:public
+cJSON::valuedouble	./cJSON.h	/^	double valuedouble;			\/* The item's number, if type==cJSON_Number *\/$/;"	m	struct:cJSON	access:public
+cJSON::valueint	./cJSON.h	/^	int valueint;				\/* The item's number, if type==cJSON_Number *\/$/;"	m	struct:cJSON	access:public
+cJSON::valuestring	./cJSON.h	/^	char *valuestring;			\/* The item's string, if type==cJSON_String *\/$/;"	m	struct:cJSON	access:public
+cJSON_AddBoolToObject	./cJSON.h	137;"	d
+cJSON_AddFalseToObject	./cJSON.h	136;"	d
+cJSON_AddItemReferenceToArray	./cJSON.c	/^void cJSON_AddItemReferenceToArray(cJSON * array, cJSON * item)$/;"	f	signature:(cJSON * array, cJSON * item)
+cJSON_AddItemReferenceToArray	./cJSON.h	/^extern void cJSON_AddItemReferenceToArray(cJSON *array, cJSON *item);$/;"	p	signature:(cJSON *array, cJSON *item)
+cJSON_AddItemReferenceToObject	./cJSON.c	/^cJSON_AddItemReferenceToObject(cJSON * object, const char *string,$/;"	f	signature:(cJSON * object, const char *string, cJSON * item)
+cJSON_AddItemReferenceToObject	./cJSON.h	/^extern void	cJSON_AddItemReferenceToObject(cJSON *object,const char *string,cJSON *item);$/;"	p	signature:(cJSON *object,const char *string,cJSON *item)
+cJSON_AddItemToArray	./cJSON.c	/^void cJSON_AddItemToArray(cJSON * array, cJSON * item)$/;"	f	signature:(cJSON * array, cJSON * item)
+cJSON_AddItemToArray	./cJSON.h	/^extern void cJSON_AddItemToArray(cJSON *array, cJSON *item);$/;"	p	signature:(cJSON *array, cJSON *item)
+cJSON_AddItemToObject	./cJSON.c	/^cJSON_AddItemToObject(cJSON * object, const char *string, cJSON * item)$/;"	f	signature:(cJSON * object, const char *string, cJSON * item)
+cJSON_AddItemToObject	./cJSON.h	/^extern void	cJSON_AddItemToObject(cJSON *object,const char *string,cJSON *item);$/;"	p	signature:(cJSON *object,const char *string,cJSON *item)
+cJSON_AddItemToObjectCS	./cJSON.c	/^cJSON_AddItemToObjectCS(cJSON * object, const char *string, cJSON * item)$/;"	f	signature:(cJSON * object, const char *string, cJSON * item)
+cJSON_AddItemToObjectCS	./cJSON.h	/^extern void	cJSON_AddItemToObjectCS(cJSON *object,const char *string,cJSON *item);	\/* Use this when string is definitely const (i.e. a literal, or as good as), and will definitely survive the cJSON object *\/$/;"	p	signature:(cJSON *object,const char *string,cJSON *item)
+cJSON_AddNullToObject	./cJSON.h	134;"	d
+cJSON_AddNumberToObject	./cJSON.h	138;"	d
+cJSON_AddStringToObject	./cJSON.h	139;"	d
+cJSON_AddTrueToObject	./cJSON.h	135;"	d
+cJSON_Array	./cJSON.h	37;"	d
+cJSON_CreateArray	./cJSON.c	/^cJSON *cJSON_CreateArray(void)$/;"	f	signature:(void)
+cJSON_CreateArray	./cJSON.h	/^extern cJSON *cJSON_CreateArray(void);$/;"	p	signature:(void)
+cJSON_CreateBool	./cJSON.c	/^cJSON *cJSON_CreateBool(int b)$/;"	f	signature:(int b)
+cJSON_CreateBool	./cJSON.h	/^extern cJSON *cJSON_CreateBool(int b);$/;"	p	signature:(int b)
+cJSON_CreateDoubleArray	./cJSON.c	/^cJSON *cJSON_CreateDoubleArray(const double *numbers, int count)$/;"	f	signature:(const double *numbers, int count)
+cJSON_CreateDoubleArray	./cJSON.h	/^extern cJSON *cJSON_CreateDoubleArray(const double *numbers,int count);$/;"	p	signature:(const double *numbers,int count)
+cJSON_CreateFalse	./cJSON.c	/^cJSON *cJSON_CreateFalse(void)$/;"	f	signature:(void)
+cJSON_CreateFalse	./cJSON.h	/^extern cJSON *cJSON_CreateFalse(void);$/;"	p	signature:(void)
+cJSON_CreateFloatArray	./cJSON.c	/^cJSON *cJSON_CreateFloatArray(const float *numbers, int count)$/;"	f	signature:(const float *numbers, int count)
+cJSON_CreateFloatArray	./cJSON.h	/^extern cJSON *cJSON_CreateFloatArray(const float *numbers,int count);$/;"	p	signature:(const float *numbers,int count)
+cJSON_CreateIntArray	./cJSON.c	/^cJSON *cJSON_CreateIntArray(const int *numbers, int count)$/;"	f	signature:(const int *numbers, int count)
+cJSON_CreateIntArray	./cJSON.h	/^extern cJSON *cJSON_CreateIntArray(const int *numbers,int count);$/;"	p	signature:(const int *numbers,int count)
+cJSON_CreateNull	./cJSON.c	/^cJSON *cJSON_CreateNull(void)$/;"	f	signature:(void)
+cJSON_CreateNull	./cJSON.h	/^extern cJSON *cJSON_CreateNull(void);$/;"	p	signature:(void)
+cJSON_CreateNumber	./cJSON.c	/^cJSON *cJSON_CreateNumber(double num)$/;"	f	signature:(double num)
+cJSON_CreateNumber	./cJSON.h	/^extern cJSON *cJSON_CreateNumber(double num);$/;"	p	signature:(double num)
+cJSON_CreateObject	./cJSON.c	/^cJSON *cJSON_CreateObject(void)$/;"	f	signature:(void)
+cJSON_CreateObject	./cJSON.h	/^extern cJSON *cJSON_CreateObject(void);$/;"	p	signature:(void)
+cJSON_CreateString	./cJSON.c	/^cJSON *cJSON_CreateString(const char *string)$/;"	f	signature:(const char *string)
+cJSON_CreateString	./cJSON.h	/^extern cJSON *cJSON_CreateString(const char *string);$/;"	p	signature:(const char *string)
+cJSON_CreateStringArray	./cJSON.c	/^cJSON *cJSON_CreateStringArray(const char **strings, int count)$/;"	f	signature:(const char **strings, int count)
+cJSON_CreateStringArray	./cJSON.h	/^extern cJSON *cJSON_CreateStringArray(const char **strings,int count);$/;"	p	signature:(const char **strings,int count)
+cJSON_CreateTrue	./cJSON.c	/^cJSON *cJSON_CreateTrue(void)$/;"	f	signature:(void)
+cJSON_CreateTrue	./cJSON.h	/^extern cJSON *cJSON_CreateTrue(void);$/;"	p	signature:(void)
+cJSON_Delete	./cJSON.c	/^void cJSON_Delete(cJSON * c)$/;"	f	signature:(cJSON * c)
+cJSON_Delete	./cJSON.h	/^extern void   cJSON_Delete(cJSON *c);$/;"	p	signature:(cJSON *c)
+cJSON_DeleteItemFromArray	./cJSON.c	/^void cJSON_DeleteItemFromArray(cJSON * array, int which)$/;"	f	signature:(cJSON * array, int which)
+cJSON_DeleteItemFromArray	./cJSON.h	/^extern void   cJSON_DeleteItemFromArray(cJSON *array,int which);$/;"	p	signature:(cJSON *array,int which)
+cJSON_DeleteItemFromObject	./cJSON.c	/^void cJSON_DeleteItemFromObject(cJSON * object, const char *string)$/;"	f	signature:(cJSON * object, const char *string)
+cJSON_DeleteItemFromObject	./cJSON.h	/^extern void   cJSON_DeleteItemFromObject(cJSON *object,const char *string);$/;"	p	signature:(cJSON *object,const char *string)
+cJSON_DetachItemFromArray	./cJSON.c	/^cJSON *cJSON_DetachItemFromArray(cJSON * array, int which)$/;"	f	signature:(cJSON * array, int which)
+cJSON_DetachItemFromArray	./cJSON.h	/^extern cJSON *cJSON_DetachItemFromArray(cJSON *array,int which);$/;"	p	signature:(cJSON *array,int which)
+cJSON_DetachItemFromObject	./cJSON.c	/^cJSON *cJSON_DetachItemFromObject(cJSON * object, const char *string)$/;"	f	signature:(cJSON * object, const char *string)
+cJSON_DetachItemFromObject	./cJSON.h	/^extern cJSON *cJSON_DetachItemFromObject(cJSON *object,const char *string);$/;"	p	signature:(cJSON *object,const char *string)
+cJSON_Duplicate	./cJSON.c	/^cJSON *cJSON_Duplicate(cJSON * item, int recurse)$/;"	f	signature:(cJSON * item, int recurse)
+cJSON_Duplicate	./cJSON.h	/^extern cJSON *cJSON_Duplicate(cJSON *item,int recurse);$/;"	p	signature:(cJSON *item,int recurse)
+cJSON_False	./cJSON.h	32;"	d
+cJSON_GetArrayItem	./cJSON.c	/^cJSON *cJSON_GetArrayItem(cJSON * array, int item)$/;"	f	signature:(cJSON * array, int item)
+cJSON_GetArrayItem	./cJSON.h	/^extern cJSON *cJSON_GetArrayItem(cJSON *array,int item);$/;"	p	signature:(cJSON *array,int item)
+cJSON_GetArraySize	./cJSON.c	/^int cJSON_GetArraySize(cJSON * array)$/;"	f	signature:(cJSON * array)
+cJSON_GetArraySize	./cJSON.h	/^extern int	  cJSON_GetArraySize(cJSON *array);$/;"	p	signature:(cJSON *array)
+cJSON_GetErrorPtr	./cJSON.c	/^const char *cJSON_GetErrorPtr(void)$/;"	f	signature:(void)
+cJSON_GetErrorPtr	./cJSON.h	/^extern const char *cJSON_GetErrorPtr(void);$/;"	p	signature:(void)
+cJSON_GetObjectItem	./cJSON.c	/^cJSON *cJSON_GetObjectItem(cJSON * object, const char *string)$/;"	f	signature:(cJSON * object, const char *string)
+cJSON_GetObjectItem	./cJSON.h	/^extern cJSON *cJSON_GetObjectItem(cJSON *object,const char *string);$/;"	p	signature:(cJSON *object,const char *string)
+cJSON_Hooks	./cJSON.h	/^typedef struct cJSON_Hooks {$/;"	s
+cJSON_Hooks	./cJSON.h	/^} cJSON_Hooks;$/;"	t	typeref:struct:cJSON_Hooks
+cJSON_Hooks::free_fn	./cJSON.h	/^      void (*free_fn)(void *ptr);$/;"	m	struct:cJSON_Hooks	access:public
+cJSON_Hooks::malloc_fn	./cJSON.h	/^      void *(*malloc_fn)(size_t sz);$/;"	m	struct:cJSON_Hooks	access:public
+cJSON_InitHooks	./cJSON.c	/^void cJSON_InitHooks(cJSON_Hooks * hooks)$/;"	f	signature:(cJSON_Hooks * hooks)
+cJSON_InitHooks	./cJSON.h	/^extern void cJSON_InitHooks(cJSON_Hooks* hooks);$/;"	p	signature:(cJSON_Hooks* hooks)
+cJSON_InsertItemInArray	./cJSON.c	/^void cJSON_InsertItemInArray(cJSON * array, int which, cJSON * newitem)$/;"	f	signature:(cJSON * array, int which, cJSON * newitem)
+cJSON_InsertItemInArray	./cJSON.h	/^extern void cJSON_InsertItemInArray(cJSON *array,int which,cJSON *newitem);	\/* Shifts pre-existing items to the right. *\/$/;"	p	signature:(cJSON *array,int which,cJSON *newitem)
+cJSON_IsReference	./cJSON.h	40;"	d
+cJSON_Minify	./cJSON.c	/^void cJSON_Minify(char *json)$/;"	f	signature:(char *json)
+cJSON_Minify	./cJSON.h	/^extern void cJSON_Minify(char *json);$/;"	p	signature:(char *json)
+cJSON_NULL	./cJSON.h	34;"	d
+cJSON_New_Item	./cJSON.c	/^static cJSON *cJSON_New_Item(void)$/;"	f	file:	signature:(void)
+cJSON_Number	./cJSON.h	35;"	d
+cJSON_Object	./cJSON.h	38;"	d
+cJSON_Parse	./cJSON.c	/^cJSON *cJSON_Parse(const char *value)$/;"	f	signature:(const char *value)
+cJSON_Parse	./cJSON.h	/^extern cJSON *cJSON_Parse(const char *value);$/;"	p	signature:(const char *value)
+cJSON_ParseWithOpts	./cJSON.c	/^cJSON *cJSON_ParseWithOpts(const char *value,$/;"	f	signature:(const char *value, const char **return_parse_end, int require_null_terminated)
+cJSON_ParseWithOpts	./cJSON.h	/^extern cJSON *cJSON_ParseWithOpts(const char *value,const char **return_parse_end,int require_null_terminated);$/;"	p	signature:(const char *value,const char **return_parse_end,int require_null_terminated)
+cJSON_Print	./cJSON.c	/^char *cJSON_Print(cJSON * item)$/;"	f	signature:(cJSON * item)
+cJSON_Print	./cJSON.h	/^extern char  *cJSON_Print(cJSON *item);$/;"	p	signature:(cJSON *item)
+cJSON_PrintBuffered	./cJSON.c	/^char *cJSON_PrintBuffered(cJSON * item, int prebuffer, int fmt)$/;"	f	signature:(cJSON * item, int prebuffer, int fmt)
+cJSON_PrintBuffered	./cJSON.h	/^extern char *cJSON_PrintBuffered(cJSON *item,int prebuffer,int fmt);$/;"	p	signature:(cJSON *item,int prebuffer,int fmt)
+cJSON_PrintUnformatted	./cJSON.c	/^char *cJSON_PrintUnformatted(cJSON * item)$/;"	f	signature:(cJSON * item)
+cJSON_PrintUnformatted	./cJSON.h	/^extern char  *cJSON_PrintUnformatted(cJSON *item);$/;"	p	signature:(cJSON *item)
+cJSON_ReplaceItemInArray	./cJSON.c	/^void cJSON_ReplaceItemInArray(cJSON * array, int which, cJSON * newitem)$/;"	f	signature:(cJSON * array, int which, cJSON * newitem)
+cJSON_ReplaceItemInArray	./cJSON.h	/^extern void cJSON_ReplaceItemInArray(cJSON *array,int which,cJSON *newitem);$/;"	p	signature:(cJSON *array,int which,cJSON *newitem)
+cJSON_ReplaceItemInObject	./cJSON.c	/^cJSON_ReplaceItemInObject(cJSON * object, const char *string,$/;"	f	signature:(cJSON * object, const char *string, cJSON * newitem)
+cJSON_ReplaceItemInObject	./cJSON.h	/^extern void cJSON_ReplaceItemInObject(cJSON *object,const char *string,cJSON *newitem);$/;"	p	signature:(cJSON *object,const char *string,cJSON *newitem)
+cJSON_SetIntValue	./cJSON.h	142;"	d
+cJSON_SetNumberValue	./cJSON.h	143;"	d
+cJSON_String	./cJSON.h	36;"	d
+cJSON_StringIsConst	./cJSON.h	41;"	d
+cJSON_True	./cJSON.h	33;"	d
+cJSON__h	./cJSON.h	24;"	d
+cJSON_free	./cJSON.c	/^static void (*cJSON_free) (void *ptr) = free;$/;"	v	file:
+cJSON_malloc	./cJSON.c	/^static void *(*cJSON_malloc) (size_t sz) = malloc;$/;"	v	file:
+cJSON_strcasecmp	./cJSON.c	/^static int cJSON_strcasecmp(const char *s1, const char *s2)$/;"	f	file:	signature:(const char *s1, const char *s2)
+cJSON_strdup	./cJSON.c	/^static char *cJSON_strdup(const char *str)$/;"	f	file:	signature:(const char *str)
+child	./cJSON.h	/^	struct cJSON *child;		\/* An array or object item will have a child pointer pointing to a chain of the items in the array\/object. *\/$/;"	m	struct:cJSON	typeref:struct:cJSON::cJSON	access:public
+create_reference	./cJSON.c	/^static cJSON *create_reference(cJSON * item)$/;"	f	file:	signature:(cJSON * item)
+ensure	./cJSON.c	/^static char *ensure(printbuffer * p, int needed)$/;"	f	file:	signature:(printbuffer * p, int needed)
+ep	./cJSON.c	/^static const char *ep;$/;"	v	file:
+firstByteMark	./cJSON.c	/^static const unsigned char firstByteMark[7] =$/;"	v	file:
+free_fn	./cJSON.h	/^      void (*free_fn)(void *ptr);$/;"	m	struct:cJSON_Hooks	access:public
+length	./cJSON.c	/^	int length;$/;"	m	struct:__anon1	file:	access:public
+main	./test.c	/^int main(int argc, const char* argv[])$/;"	f	signature:(int argc, const char* argv[])
+malloc_fn	./cJSON.h	/^      void *(*malloc_fn)(size_t sz);$/;"	m	struct:cJSON_Hooks	access:public
+next	./cJSON.h	/^	struct cJSON *next,*prev;	\/* next\/prev allow you to walk array\/object chains. Alternatively, use GetArraySize\/GetArrayItem\/GetObjectItem *\/$/;"	m	struct:cJSON	typeref:struct:cJSON::cJSON	access:public
+offset	./cJSON.c	/^	int offset;$/;"	m	struct:__anon1	file:	access:public
+parse_array	./cJSON.c	/^static const char *parse_array(cJSON * item, const char *value)$/;"	f	file:	signature:(cJSON * item, const char *value)
+parse_array	./cJSON.c	/^static const char *parse_array(cJSON * item, const char *value);$/;"	p	file:	signature:(cJSON * item, const char *value)
+parse_hex4	./cJSON.c	/^static unsigned parse_hex4(const char *str)$/;"	f	file:	signature:(const char *str)
+parse_number	./cJSON.c	/^static const char *parse_number(cJSON * item, const char *num)$/;"	f	file:	signature:(cJSON * item, const char *num)
+parse_object	./cJSON.c	/^static const char *parse_object(cJSON * item, const char *value)$/;"	f	file:	signature:(cJSON * item, const char *value)
+parse_object	./cJSON.c	/^static const char *parse_object(cJSON * item, const char *value);$/;"	p	file:	signature:(cJSON * item, const char *value)
+parse_string	./cJSON.c	/^static const char *parse_string(cJSON * item, const char *str)$/;"	f	file:	signature:(cJSON * item, const char *str)
+parse_value	./cJSON.c	/^static const char *parse_value(cJSON * item, const char *value)$/;"	f	file:	signature:(cJSON * item, const char *value)
+parse_value	./cJSON.c	/^static const char *parse_value(cJSON * item, const char *value);$/;"	p	file:	signature:(cJSON * item, const char *value)
+pow2gt	./cJSON.c	/^static int pow2gt(int x)$/;"	f	file:	signature:(int x)
+prev	./cJSON.h	/^	struct cJSON *next,*prev;	\/* next\/prev allow you to walk array\/object chains. Alternatively, use GetArraySize\/GetArrayItem\/GetObjectItem *\/$/;"	m	struct:cJSON	typeref:struct:cJSON::	access:public
+print_array	./cJSON.c	/^static char *print_array(cJSON * item, int depth, int fmt, printbuffer * p)$/;"	f	file:	signature:(cJSON * item, int depth, int fmt, printbuffer * p)
+print_array	./cJSON.c	/^static char *print_array(cJSON * item, int depth, int fmt,$/;"	p	file:	signature:(cJSON * item, int depth, int fmt, printbuffer * p)
+print_number	./cJSON.c	/^static char *print_number(cJSON * item, printbuffer * p)$/;"	f	file:	signature:(cJSON * item, printbuffer * p)
+print_object	./cJSON.c	/^static char *print_object(cJSON * item, int depth, int fmt,$/;"	f	file:	signature:(cJSON * item, int depth, int fmt, printbuffer * p)
+print_object	./cJSON.c	/^static char *print_object(cJSON * item, int depth, int fmt,$/;"	p	file:	signature:(cJSON * item, int depth, int fmt, printbuffer * p)
+print_string	./cJSON.c	/^static char *print_string(cJSON * item, printbuffer * p)$/;"	f	file:	signature:(cJSON * item, printbuffer * p)
+print_string_ptr	./cJSON.c	/^static char *print_string_ptr(const char *str, printbuffer * p)$/;"	f	file:	signature:(const char *str, printbuffer * p)
+print_value	./cJSON.c	/^static char *print_value(cJSON * item, int depth, int fmt, printbuffer * p)$/;"	f	file:	signature:(cJSON * item, int depth, int fmt, printbuffer * p)
+print_value	./cJSON.c	/^static char *print_value(cJSON * item, int depth, int fmt,$/;"	p	file:	signature:(cJSON * item, int depth, int fmt, printbuffer * p)
+printbuffer	./cJSON.c	/^} printbuffer;$/;"	t	typeref:struct:__anon1	file:
+skip	./cJSON.c	/^static const char *skip(const char *in)$/;"	f	file:	signature:(const char *in)
+string	./cJSON.h	/^	char *string;				\/* The item's name string, if this item is the child of, or is in the list of subitems of an object. *\/$/;"	m	struct:cJSON	access:public
+suffix_object	./cJSON.c	/^static void suffix_object(cJSON * prev, cJSON * item)$/;"	f	file:	signature:(cJSON * prev, cJSON * item)
+type	./cJSON.h	/^	int type;					\/* The type of the item, as above. *\/$/;"	m	struct:cJSON	access:public
+update	./cJSON.c	/^static int update(printbuffer * p)$/;"	f	file:	signature:(printbuffer * p)
+valuedouble	./cJSON.h	/^	double valuedouble;			\/* The item's number, if type==cJSON_Number *\/$/;"	m	struct:cJSON	access:public
+valueint	./cJSON.h	/^	int valueint;				\/* The item's number, if type==cJSON_Number *\/$/;"	m	struct:cJSON	access:public
+valuestring	./cJSON.h	/^	char *valuestring;			\/* The item's string, if type==cJSON_String *\/$/;"	m	struct:cJSON	access:public
