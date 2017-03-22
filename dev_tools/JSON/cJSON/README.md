@@ -1,7 +1,7 @@
 
 ### 下载
 
-地址：++http://sourceforge.net/projects/cjson/++
+地址：http://sourceforge.net/projects/cjson/
 
 ### 数据结构
 

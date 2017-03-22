@@ -6,7 +6,7 @@
     - JSON 独立于语言
     - JSON 具有自我描述性，更易理解
     
-官方地址：++http://www.json.org/++
+官方地址：http://www.json.org/
 
 ### 语法格式
 
