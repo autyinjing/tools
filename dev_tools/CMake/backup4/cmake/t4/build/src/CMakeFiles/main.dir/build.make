@@ -90,7 +90,7 @@ main_EXTERNAL_OBJECTS =
 
 src/main: src/CMakeFiles/main.dir/main.c.o
 src/main: src/CMakeFiles/main.dir/build.make
-src/main: /home/aut/tmp/t2/usr/lib/libhello.a
+src/main: /home/aut/tmp/t2/usr/lib/libhello.so
 src/main: src/CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aut/study/tools/dev_tools/cmake/backup4/cmake/t4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable main"
 	cd /home/aut/study/tools/dev_tools/cmake/backup4/cmake/t4/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)

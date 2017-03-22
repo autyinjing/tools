@@ -3,8 +3,8 @@
 
 INCLUDE_DIRECTORIES(/home/aut/study/tools/dev_tools/cmake/backup4/cmake/t3/lib/)
 ADD_EXECUTABLE(main main.c)
-#TARGET_LINK_LIBRARIES(main /home/aut/tmp/t2/usr/lib/libhello.so)
-TARGET_LINK_LIBRARIES(main /home/aut/tmp/t2/usr/lib/libhello.a)
+TARGET_LINK_LIBRARIES(main /home/aut/tmp/t2/usr/lib/libhello.so)
+#TARGET_LINK_LIBRARIES(main /home/aut/tmp/t2/usr/lib/libhello.a)
 
 MESSAGE(STATUS "CMAKE_CURRENT_SOURCE_DIR: " ${CMAKE_CURRENT_SOURCE_DIR})
 MESSAGE(STATUS "CMAKE_CURRENT_BINARY_DIR: " ${CMAKE_CURRENT_BINARY_DIR})
