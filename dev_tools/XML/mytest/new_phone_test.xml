@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phone_books>
+  <phone id="1219" nick="Two second">
+    <name>aut</name>
+    <mail>autyinjing@126.com</mail>
+    <phone_list>
+      <phone_node>
+        <tel>138-8888-8888</tel>
+        <address>ShangHai</address>
+      </phone_node>
+      <phone_node>
+        <tel>136-6666-6666</tel>
+        <address>ShenZhen</address>
+      </phone_node>
+    </phone_list>
+  </phone>
+</phone_books>
