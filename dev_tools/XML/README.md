@@ -3,6 +3,7 @@
 
 ```
 <?xml version="1.0"?>
+<!-- This is comment -->
 
 <addressBook>
     <name>aut</name>
@@ -24,6 +25,7 @@
 例子 | 说明
 --- | ---
 <?xml version="1.0"?> | 版本声明
+<!-- This is comment --> | 注释
 addressBook | 根节点
 name | 一级子节点
 phone | 二级子节点
