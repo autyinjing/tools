@@ -11,7 +11,7 @@
 
 int main(int argc, const char* argv[])
 {
-    bool a= true;
+    bool a = true;
 
     return 0;
 }
