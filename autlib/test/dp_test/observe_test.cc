@@ -18,8 +18,6 @@ using std::endl;
 using std::set;
 using std::string;
 
-class Subject;
-
 // 观察者
 class Observer
 {
