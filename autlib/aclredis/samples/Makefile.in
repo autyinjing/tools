@@ -1,0 +1,63 @@
+CC	= ${ENV_CPP}
+FLAGS   = ${ENV_FLAGS}
+
+CFLAGS = -c -g -W \
+-O3 \
+-Wall \
+-Werror \
+-Wshadow \
+-Wno-long-long \
+-Wpointer-arith \
+-D_REENTRANT \
+-D_POSIX_PTHREAD_SEMANTICS \
+-D_USE_FAST_MACRO
+
+SYSLIB = -lpthread -ldl
+EXTLIBS =
+OSNAME = $(shell uname -sm)
+UNIXNAME = $(OSNAME)
+
+ifeq ($(CC),)
+        CC = g++
+endif
+
+ifeq ($(findstring HAS_LIBICONV, $(FLAGS)), HAS_LIBICONV)
+	EXTLIBS += -liconv
+endif
+
+#Path for Linux
+ifeq ($(findstring Linux, $(OSNAME)), Linux)
+	SYSLIB += -rdynamic
+endif
+
+CFLAGS += -I../include 
+LDFLAGS = -L../lib -lacl_cpp -lprotocol -lacl $(EXTLIBS) $(SYSLIB)
+
+COMPILE = $(CC) $(CFLAGS)
+LINK = $(CC) $(OBJ) $(LDFLAGS)
+OBJ_PATH = .
+
+#Project's objs
+SRC = $(wildcard *.cpp)
+OBJ = $(patsubst %.cpp, $(OBJ_PATH)/%.o, $(notdir $(SRC)))
+
+$(OBJ_PATH)/%.o: %.cpp
+	$(COMPILE) $< -o $@
+$(OBJ_PATH)/%.o: $(UTIL_PATH)/%.cpp
+	$(COMPILE) $< -o $@
+
+.PHONY = all clean
+all: RM $(OBJ)
+	$(LINK) -o $(PROG)
+	@echo ""
+	@echo "All ok! Output:$(PROG)"
+	@echo ""
+rebuild rb: clean all
+RM:
+	rm -f $(PROG)
+clean cl:
+	rm -f $(PROG)
+	rm -f $(OBJ)
+
+rebuild rb: clean all
+###########################################################
