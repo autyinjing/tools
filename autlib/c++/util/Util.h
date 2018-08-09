@@ -15,15 +15,15 @@
 
 namespace AutLib { namespace Util {
 
-    //enum enmTimeSecond
-    //{
-        //OneMinuteSecond     = 60,       //一分钟的秒数
-        //OneHourSecond       = 3600,     //一小时的秒数
-        //OneDaySecond        = 86400,    //一天的秒数
-        //OneWeekSecond       = 6048000,  //一周的秒数
+    enum enmTimeSecond
+    {
+        OneMinuteSecond     = 60,       //一分钟的秒数
+        OneHourSecond       = 3600,     //一小时的秒数
+        OneDaySecond        = 86400,    //一天的秒数
+        OneWeekSecond       = 6048000,  //一周的秒数
 
-        //TimeValueEnd
-    //}
+        TimeValueEnd
+    }
 
     //获取今天hh:mm:ss的秒数
     static inline uint32_t today_sometime_second(uint32_t hh = 0, uint32_t mm = 0, uint32_t ss = 0)
