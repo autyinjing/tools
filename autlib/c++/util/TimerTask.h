@@ -9,8 +9,10 @@
 #include <map>
 #include <functional>
 #include <set>
+#include <string>
 
 typedef std::function<void()> TaskFunc;
+typedef std::function<void(const std::string &context)> TaskFuncWithContext;
 
 class ITimerTask;
 class PriorityQueueTimerTask;
@@ -77,12 +79,27 @@ public:
     ~__Task(){}
 };
 
+class __TaskWithContext{
+public:
+    int64_t id_;
+    int64_t runtime_;
+    std::string context_;
+    BaseTask* base_task_;
+
+    TaskFuncWithContext func;
+
+    __TaskWithContext(){}
+    ~__TaskWithContext(){}
+};
+
 class PriorityQueueTimerTask : public ITimerTask
 {
     friend class BaseTask;
 private:
     std::multimap<int64_t, __Task *> tasks_;
+    std::multimap<int64_t, __TaskWithContext*> taskswc_;
     std::map<int64_t, std::multimap<int64_t, __Task * >::iterator > id_2_task_;
+    std::map<int64_t, std::multimap<int64_t, __TaskWithContext* >::iterator > id_2_taskwc_;
     int64_t id = 0;
     int64_t next_id()
     {
@@ -119,6 +136,30 @@ public:
             }
         }
     }
+
+    void RunWithContext(int64_t time)
+    {
+        while (true)
+        {
+            auto it = taskswc_.begin();
+            if (it == taskswc_.end())
+            {
+                break;
+            }
+            if(it->first <= time)
+            {
+                id_2_taskwc_.erase(it->second->id_);
+                it->second->func(it->second->context_);
+                delete it->second;
+                taskswc_.erase(it);
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+
     template <class T>
     int64_t AddTask(int64_t time, T* task, std::function<void()>&& func)
     {
@@ -151,6 +192,27 @@ public:
 
         BaseTask* baseTask = dynamic_cast<BaseTask*>(task);
         if(baseTask!= nullptr)
+        {
+            baseTask->ids_.insert(aTask->id_);
+        }
+        aTask->base_task_ = baseTask;
+
+        return aTask->id_;
+    }
+
+    template <class T>
+    int64_t AddTaskWithContext(int64_t time, T *task,void (T::*func)(const std::string&), const std::string &context)
+    {
+        __TaskWithContext *aTask = new __TaskWithContext;
+        aTask->id_ = next_id();
+        aTask->runtime_ = time;
+        aTask->func = std::bind(func,task,std::placeholders::_1);
+        aTask->context_ = context;
+        auto it = taskswc_.insert(std::pair<int64_t, __TaskWithContext *>(time, aTask));
+        id_2_taskwc_[aTask->id_] = it;
+
+        BaseTask* baseTask = dynamic_cast<BaseTask*>(task);
+        if(baseTask != nullptr)
         {
             baseTask->ids_.insert(aTask->id_);
         }
